@@ -34,6 +34,11 @@ public:
 		return SyscallError.Failcopter;
 	}
 
+	SyscallError print(PrintArgs* params){
+		kprintf!("{}")(params.val);
+		return SyscallError.OK;
+	}
+
 	SyscallError map(MapArgs* params) {
 		VirtualMemory.mapSegment(params.dest, params.location, params.destination, params.mode);
 		return SyscallError.Failcopter;

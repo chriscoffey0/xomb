@@ -24,6 +24,9 @@ void main() {
 
 	MinFS.initialize();
 
+	Syscall.print("Yay! It's a syscall!!!");
+	Console.putChar('\n');
+
 	printPrompt();
 
 	char[128] str;
